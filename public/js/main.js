@@ -17,7 +17,7 @@ $(document).ready(function(){
   let api_key = 'd75385709d134b0a92ef2f15524a9d44';
   let what = 'dominican-republic-elections-2020';
   let now_date = new Date();
-  fetch(`http://newsapi.org/v2/everything?q=${what}&from=${now_date.toString()}&sortBy=publishedAt&apiKey=${api_key}`)
+  fetch(`https://newsapi.org/v2/everything?q=${what}&from=${now_date.toString()}&sortBy=publishedAt&apiKey=${api_key}`)
   .then((response) => {
     /* 
       source: {id: null, name: "Truthdig.com"}
@@ -48,7 +48,7 @@ $(document).ready(function(){
         </div>
     </div>
    `;
-    console.log(response);
+    //console.log(response);
     /*
     var i;
     for (i = 0; i < articles.length; i++) {
@@ -78,7 +78,7 @@ $(document).ready(function(){
     return response.json();
   })
   .then((myJson) => {
-    console.log(myJson);
+    //console.log(myJson);
     
     let articles = myJson.articles;
 
@@ -90,7 +90,6 @@ $(document).ready(function(){
       var date = d.toLocaleDateString();
       let title = article.title.substring(0,50);
       let desc = article.description.substring(0,150);
-      console.log(desc);
       
       $('.news_active').append(`
         <div class="single__blog d-flex align-items-center">
