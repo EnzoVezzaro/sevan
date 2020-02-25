@@ -1081,9 +1081,6 @@ h3 {
 
 @media (max-width: 767px) {
   /* line 1, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
-  .header-area {
-    padding: 0 10px 10px 10px;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
