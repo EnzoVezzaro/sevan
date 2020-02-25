@@ -236,6 +236,15 @@ let googleAutocomplete = {
     google.maps.event.addListener(autocomplete, "place_changed",async function(e) {
       $('#candidates_results').empty();
       $("#candidates-response").empty();
+      // RENDER TEXT
+      let notify = `
+        <div class="col-lg-6">
+            <div class="section_title text-center mb-55">
+              <h3><span>Estamos buscando los candidatos en tu area</span></h3>
+            </div>
+        </div>
+      `;
+      $("#candidates-response").append(notify);
       // Segment results into usable parts.
       var place = autocomplete.getPlace(),
         address = place.address_components,
@@ -449,6 +458,8 @@ let googleAutocomplete = {
 
                   } else {
                     if (loaded){
+                      $('#candidates_results').empty();
+                      $("#candidates-response").empty();
                       // RENDER TEXT
                       template_notify = `
                       <div class="col-lg-6">
@@ -459,17 +470,8 @@ let googleAutocomplete = {
                       </div>
                       `;
                       $("#candidates-response").append(template_notify);
-                    } else {
-                      // RENDER TEXT
-                      template_notify = `
-                        <div class="col-lg-6">
-                            <div class="section_title text-center mb-55">
-                              <h3><span>Estamos buscando los candidatos en tu area</span></h3>
-                            </div>
-                        </div>
-                      `;
-                      $("#candidates-response").append(template_notify);
-                    }
+                    } 
+                    
                      
                   }
 
