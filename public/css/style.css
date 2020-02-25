@@ -1553,6 +1553,14 @@ h3 {
   }
 }
 
+@media (max-width: 425px) {
+  /* line 28, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
+  .slider_area .single_slider .slider_text h3 {
+    font-size: 43px;
+    margin-bottom: 20px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 28, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text h3 {
