@@ -47,7 +47,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>#SeVan</title>
   </head>
   <body>
       <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -59,7 +59,7 @@
 
     <!-- header-start -->
     <header>
-        <div class="header-area ">
+        <div class="header-area " data-scroll-index="0">
             <!--
             <div class="header-top_area">
                 <div class="container-fluid">
@@ -97,7 +97,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
-                                <a href="index.html">
+                                <a data-scroll-nav="0">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </div>
@@ -106,26 +106,14 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="About.html">About</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href="Cause.html">Cause</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a data-scroll-nav="1">Por que votar</a></li>
+                                        <li><a data-scroll-nav="2">Plaza de la Bandera</a></li>
+                                         <li><a data-scroll-nav="4">News</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Mi Candidato</a>
+                                        <a data-scroll-nav='3' href="#">Mi Candidato</a>
                                     </div>
                                 </div>
                             </div>
@@ -141,7 +129,7 @@
     <!-- header-end -->
 
     <!-- slider_area_start -->
-    <div class="slider_area">
+    <div class="slider_area" >
         <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
             <div class="container">
                 <div class="row">
@@ -173,7 +161,7 @@
                                 <i class="flaticon-in-love"></i>
                             </div>
                             <div class="events">
-                                <h3 class="counter">120</h3>
+                                <h3 class="counter">20</h3>
                                 <p>Ciudades</p>
                             </div>
                         </div>
@@ -184,7 +172,7 @@
                                 <i class="flaticon-calendar"></i>
                             </div>
                             <div class="events">
-                                <h3 class="counter">120</h3>
+                                <h3 class="counter">60</h3>
                                 <p>Eventos</p>
                             </div>
                         </div>
@@ -195,7 +183,7 @@
                                 <i class="flaticon-hug"></i>
                             </div>
                             <div class="events">
-                                <h3 class="counter">120</h3>
+                                <h3 class="counter">40</h3>
                                 <p>Manifestantes</p>
                             </div>
                         </div>
@@ -207,7 +195,7 @@
     <!-- counter_area_end  -->
 
     <!-- reson_area_start  -->
-    <div class="reson_area section_padding">
+    <div class="reson_area section_padding" data-scroll-index="1">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -271,7 +259,7 @@
     <!-- reson_area_end  -->
 
     <!-- latest_activites_area_start  -->
-    <div class="latest_activites_area">
+    <div class="latest_activites_area" data-scroll-index="2">
         <div class=" video_bg_1 video_activite  d-flex align-items-center justify-content-center">
             <a class="popup-video" href="https://www.youtube.com/embed/u0tMU8VZ5fU">
                 <i class="flaticon-ui"></i>
@@ -525,7 +513,7 @@
     -->
     <!-- our_volunteer_area_end  -->
 
-    <div data-scroll-index='1' class="make_donation_area section_padding">
+    <div data-scroll-index='3' class="make_donation_area section_padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -546,7 +534,7 @@
                                             <div class="input-group-prepend">
                                               <span class="input-group-text" id="basic-addon1"><i style="font-size: 16px" class="ti-target"></i></span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Tu direccion" aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-control" placeholder="Tu direccion" aria-label="Username" aria-describedby="basic-addon1" id="address">
                                           </div>
                                     </div>
                                 </div>
@@ -630,7 +618,7 @@
     -->
 
     <!-- news__area_start  -->
-    <div class="news__area section_padding">
+    <div class="news__area section_padding" data-scroll-index="4">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -659,7 +647,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a data-scroll-nav="0">
                                         <img src="img/logo.png" alt="">
                                     </a>
                                 </div>
@@ -669,22 +657,17 @@
                             <div class="socail_links">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/search/top/?q=%23sevan" target="_blank">
                                             <i class="ti-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://twitter.com/search?q=%23SeVan" target="_blank">
                                             <i class="ti-twitter-alt"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-dribbble"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/explore/tags/sevan/" target="_blank">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -703,8 +686,6 @@
                                 <li><a href="#">Sponsor</a></li>
                                 <li><a href="#">Fundraise</a></li>
                                 <li><a href="#">Volunteer</a></li>
-                                <li><a href="#">Partner</a></li>
-                                <li><a href="#">Jobs</a></li>
                             </ul>
                         </div>
                     </div>
@@ -714,10 +695,8 @@
                                 Contacts
                             </h3>
                             <div class="contacts">
-                                <p>+2(305) 587-3407 <br>
-                                    info@loveuscharity.com <br>
-                                    Flat 20, Reynolds Neck, North
-                                    Helenaville, FV77 8WS
+                                <p>+X (XXX) XXX-XXXX <br>
+                                    <a href="mailto:sevanhello@gmail.com">sevanhello@gmail.com</a> <br>
                                 </p>
                             </div>
                         </div>
@@ -728,6 +707,7 @@
                                 Top News
                             </h3>
                             <ul class="news_links">
+                                <!--
                                 <li>
                                     <div class="thumb">
                                         <a href="#">
@@ -756,6 +736,7 @@
                                         <span>Jun 12, 2019</span>
                                     </div>
                                 </li>
+                                -->
                             </ul>
                         </div>
                     </div>
@@ -778,8 +759,8 @@
     </footer>
     <!-- footer_end  -->
 
-    <!-- link that opens popup -->
-
+    <!-- google maps -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChqh3ACdyOYsvQ1LNiV8KOZOc-b0wN-B4&libraries=places"></script>
     <!-- JS here -->
     <script src="%PUBLIC_URL%/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="%PUBLIC_URL%/js/vendor/jquery-1.12.4.min.js"></script>

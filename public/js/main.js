@@ -106,6 +106,21 @@ $(document).ready(function(){
             </div>
         </div>
      `);
+
+     if (i < 3){
+      $('.news_links').append(`
+      <li>
+        <div class="thumb" style="background-image: url(${article.urlToImage})"></div>
+        <div class="info">
+            <a href="${article.url}" target="_blank">
+                <h4>${title}...</h4>
+            </a>
+            <span>${date}</span>
+        </div>
+      </li>
+     `);
+     }
+
     }
 
     // render 
@@ -141,6 +156,62 @@ $('.news_active').owlCarousel({
 });
 
   });
+
+  /*
+  fetch(`https://lu2lgow2oe.execute-api.us-east-1.amazonaws.com/dev/get_candidates`)
+  .then((response) => {
+    return response.json();
+  })
+  .then((myJson) => {
+    console.log(myJson);
+  })
+  */
+
+// GOOGLE AUTOCOMPLETE
+// Prepare location info object.
+var locationInfo = {
+  geo: null,
+  country: null,
+  state: null,
+  city: null,
+  postalCode: null,
+  street: null,
+  streetNumber: null,
+  reset: function() {
+    this.geo = null;
+    this.country = null;
+    this.state = null;
+    this.city = null;
+    this.postalCode = null;
+    this.street = null;
+    this.streetNumber = null;
+  }
+};
+
+let googleAutocomplete = {
+  autocompleteField: function(fieldId) {
+    var input = document.getElementById(fieldId);
+    var options = {
+      types: ['geocode']
+    };
+
+    let autocomplete = new google.maps.places.Autocomplete(input, options);
+    
+    google.maps.event.addListener(autocomplete, "place_changed", function(e) {
+      console.log(e);
+      return;
+      // Segment results into usable parts.
+      var place = autocomplete.getPlace(),
+        address = place.address_components,
+        lat = place.geometry.location.lat(),
+        lng = place.geometry.location.lng();
+    });
+  }
+};
+
+// Attach listener to address input field.
+googleAutocomplete.autocompleteField("address");
+
   
 
 // mobile_menu
@@ -304,7 +375,15 @@ $('.popup-video').magnificPopup({
     activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
   });
 
-
+  /*
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+  
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
+  });
+  */
   // blog-page
 
   //brand-active

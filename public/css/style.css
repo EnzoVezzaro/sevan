@@ -1184,7 +1184,8 @@ h3 {
 
 /* line 88, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn {
-  margin-left: 30px;
+  margin-left: 15px;
+  margin-right: 10px;
 }
 
 /* line 90, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -1209,8 +1210,8 @@ h3 {
 
 /* line 101, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
 .header-area .main-header-area .Appointment .book_btn a:hover {
-  background: #fff;
-  color: #3CC78F;
+  background: #daf1e8;
+  color: #335045;
 }
 
 /* line 108, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
@@ -2291,11 +2292,17 @@ h3 {
 }
 
 /* line 70, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
-.footer .footer_top .footer_widget .news_links li .thumb img {
-  width: 98px;
+.footer .footer_top .footer_widget .news_links li .thumb{
+  width: 40%;
+  height: 100px;
+  background-color: #eee; 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+
+.footer .footer_top .footer_widget .news_links li .info{
+  width: 60%;
 }
 
 /* line 76, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_footer.scss */
