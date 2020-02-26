@@ -3514,6 +3514,9 @@ h3 {
   .news__area .single__blog {
     display: block !important;
   }
+  .news__area .single__blog .thum{
+    height: 0px;
+  }
 }
 
 /* line 12, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_news.scss */
