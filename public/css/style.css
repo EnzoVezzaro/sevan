@@ -6785,6 +6785,7 @@ h6 {
   position: relative;
   left: 0;
   box-shadow: none;
+  width: 100%;
 }
 
 .reson_area .single_reson .help_content p{

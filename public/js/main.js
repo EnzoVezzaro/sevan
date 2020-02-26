@@ -371,24 +371,24 @@ let googleAutocomplete = {
     google.maps.event.addListener(autocomplete, "place_changed",async function(e) {
       $('#candidates_results').empty();
       $("#candidates-response").empty();
-      // RENDER TEXT
-      let notify = `
-        <div class="col-lg-6">
-            <div class="section_title text-center mb-55">
-              <h3><span>Estamos buscando los candidatos en tu area</span></h3>
-            </div>
-        </div>
-      `;
-      $("#candidates-response").append(notify);
       // Segment results into usable parts.
-      var place = autocomplete.getPlace(),
-        address = place.address_components,
-        lat = place.geometry.location.lat(),
-        lng = place.geometry.location.lng();
+      var place = autocomplete.getPlace();
+      var address = place.address_components;
+      if (place.geometry){
+        var lat = place.geometry.location.lat();
+        var lng = place.geometry.location.lng();
+      }
+      
       let template_notify = '';
-      if (!place){
+      if (
+        !place ||
+        !address ||
+        !lat ||
+        !lng
+      ){
         $('#candidates_results').empty();
         $("#candidates-response").empty();
+        /*
         template_notify = `
           <div class="col-lg-6">
               <div class="section_title text-center mb-55">
@@ -398,7 +398,19 @@ let googleAutocomplete = {
           </div>
         `;
         $("#candidates-response").append(template_notify);
+        */
+        return;
       }
+
+      // RENDER TEXT
+      let notify = `
+        <div class="col-lg-6">
+            <div class="section_title text-center mb-55">
+              <h3><span>Estamos buscando los candidatos en tu area</span></h3>
+            </div>
+        </div>
+      `;
+      $("#candidates-response").append(notify);
 
       console.log(place);
       let address_components = place.address_components;
@@ -524,7 +536,7 @@ let googleAutocomplete = {
                             party_img = 'https://scontent-mxp1-1.xx.fbcdn.net/v/t31.0-8/p960x960/26951711_1925824597732565_1669622379159076187_o.jpg?_nc_cat=108&_nc_ohc=tjC8IOeM_xYAX_s9kBA&_nc_ht=scontent-mxp1-1.xx&_nc_tp=6&oh=bd3c017520000bff0330df20e16e1449&oe=5EF72FDB';
                             break;
                         case 'MOVIMIENTO POLITICO AGUILA':
-                            party_img = '';
+                            party_img = 'https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/52586584_367779150723644_3770238952330493952_n.jpg?_nc_cat=101&_nc_ohc=txlzxeZ2650AX_9VKfW&_nc_ht=scontent-mxp1-1.xx&oh=21703748a558327f268e59890993624c&oe=5EF41006';
                             break;
                         case 'MOVIMIENTO INDEPENDIENTE POR EL RESCATE DE BARAHONA':
                             party_img = '';
@@ -551,7 +563,7 @@ let googleAutocomplete = {
                             party_img = '';
                             break;
                         case 'MOVIMIENTO COMUNITARIO POLITICO NOSOTROS PA\' CUANDO':
-                            party_img = '';
+                            party_img = 'https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/51459374_2235373563448042_6789787616402210816_n.jpg?_nc_cat=102&_nc_ohc=Scaj_CyTbxsAX-sxXMr&_nc_ht=scontent-mxp1-1.xx&oh=3e7237d91e805e3dcbe0239fdf7ef387&oe=5EC1FC0A';
                             break;
                         case 'MOVIMIENTO INDEPENDIENTE UNIDAD Y PROGRESO':
                             party_img = '';
