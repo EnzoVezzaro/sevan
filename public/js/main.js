@@ -279,7 +279,7 @@ let googleAutocomplete = {
               if (include === types_elem){
                 let long_name= element.long_name;
                 console.log('loaded: ',loaded);
-                if (!loaded){
+                if (!loaded && (f <= includes.length)){
                   console.log('loaded: ',loaded);
                   console.log('long_name: ',long_name);
                   let data = await searchCandidates(`${long_name}`);
