@@ -29,9 +29,11 @@ console.log(name);
 if (
   window.location.hostname !== 'localhost'
 ){
+  /*
   console.log = function() {}
   console.debug = function() {}
   console.warn = function() {}
+  */
 
 }
 
