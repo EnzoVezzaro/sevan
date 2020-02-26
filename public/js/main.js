@@ -29,11 +29,9 @@ console.log(name);
 if (
   window.location.hostname !== 'localhost'
 ){
-  /*
   console.log = function() {}
   console.debug = function() {}
   console.warn = function() {}
-  */
 
 }
 
@@ -444,6 +442,8 @@ let googleAutocomplete = {
                       console.log(candidate_cargo == candidate.cargo);
                       if (candidate_cargo !== candidate.cargo){
                         candidate_cargo = candidate.cargo;
+                        var candidate_cargo_id = `candidate_${o}`;
+                        
                         $('#candidates_results').append(`<div class="row justify-content-center">
                             <div class="col-lg-6">
                                 <div class="section_title text-center mb-55">
@@ -451,7 +451,7 @@ let googleAutocomplete = {
                                 </div>
                             </div>
                         </div>`);
-                        $('#candidates_results').append(`<div class="row" id="res_${candidate.cargo}"></div>`);
+                        $('#candidates_results').append(`<div class="row" id="res_${candidate_cargo_id}"></div>`);
                       }
                       let image = 'img/profile.png';
                       if (candidate.profile_img){
@@ -582,18 +582,33 @@ let googleAutocomplete = {
                                         <p>${candidate.cargo}</p>
                                     </div>
                                     <div class="partido">
-                                        <p>Posicion Boleta: ${candidate.posicion_boleta}</p>
+                                        <p><b>Posicion Boleta</b>: ${candidate.posicion_boleta}</p>
                                     </div>
                                     ${link}
                                 </div>
                             </div>
                         </div>
                         `;
-                        $(`#res_${candidate_cargo}`).append(template);   
+                        $(`#res_${candidate_cargo_id}`).append(template);   
                         
                     }
 
                   } else {
+                    if (data.statusCode === 400){
+                      $('#candidates_results').empty();
+                      $("#candidates-response").empty();
+                      // RENDER TEXT
+                      template_notify = `
+                      <div class="col-lg-6">
+                          <div class="section_title text-center mb-55">
+                              <h3><span>Lamentablemente tenemos problemas con el sistema</span></h3>
+                              <p>Si el problema persiste, for favor escribenos a <a href="mailto:sevanhello@gmail.com">sevanhello@gmail.com</a> </p>
+                          </div>
+                      </div>
+                      `;
+                      $("#candidates-response").append(template_notify);
+                      return;
+                    }
                     if (loaded){
                       $('#candidates_results').empty();
                       $("#candidates-response").empty();
@@ -607,6 +622,7 @@ let googleAutocomplete = {
                       </div>
                       `;
                       $("#candidates-response").append(template_notify);
+                      return;
                     } 
                     
                      
