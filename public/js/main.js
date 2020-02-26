@@ -11,6 +11,29 @@ $(window).on('scroll', function () {
     $('#back-top').fadeIn(500);
 	}
 });
+// PRINT VERSION
+let name = `
+  _  _                             
+_| || |_ ___  _____   ____ _ _ __  
+|_ ..  _/ __|/ _ \ \ / / _' | '_ \ 
+|_      _\__ \  __/\ V / (_| | | | |
+ |_||_| |___/\___| \_/ \__,_|_| |_|
+************************************
+************************************
+******* v0.0.1 *********************
+************************************
+************************************
+`;
+console.log(name);
+// CHECK IF DEPLOYED
+if (
+  window.location.hostname !== 'localhost'
+){
+  console.log = function() {}
+  console.debug = function() {}
+  console.warn = function() {}
+
+}
 
 
 $(document).ready(function(){
