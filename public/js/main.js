@@ -145,13 +145,12 @@ all.map(provs => {
 
   /* 
   start script
-  */
   let api_key = 'd75385709d134b0a92ef2f15524a9d44';
   let what = 'dominican-republic-elections-fraud';
   let now_date = new Date();
   fetch(`https://newsapi.org/v2/everything?q=${what}&from=${now_date.toString()}&sortBy=publishedAt&apiKey=${api_key}`)
   .then((response) => {
-    /* 
+    
       source: {id: null, name: "Truthdig.com"}
       author: "Natasha Hakimi Zapata"
       title: "The Latinx Vote Might Carry ‘Tio Bernie’ to Victory"
@@ -160,7 +159,7 @@ all.map(provs => {
       urlToImage: "https://www.truthdig.com/wp-content/uploads/2020/02/AP_19355848901012-1024x749.jpg"
       publishedAt: "2020-02-22T11:07:04Z"
       content: "Theres no denying Latinx voters are falling in love with Tío Bernie. As a supporter of Sanders myself, Id been reading indications of this phenomenon for many months con mi corazón en la boca, a Spanish saying that translates roughly to with baited breath. Sa… [+17294 chars]"
-    */
+    
    let template = `
     <div class="single__blog d-flex align-items-center">
         <div class="thum">
@@ -181,7 +180,7 @@ all.map(provs => {
     </div>
    `;
     //console.log(response);
-    /*
+    
     var i;
     for (i = 0; i < articles.length; i++) {
       let article = articles[i];
@@ -205,112 +204,130 @@ all.map(provs => {
         </div>
      `);
     }
-    */
+    
 
     return response.json();
   })
   .then((myJson) => {
-    //console.log(myJson);
     
-    let articles = myJson.articles;
-    if (articles){
-      var i;
-      for (i = 0; i < articles.length; i++) {
-        let article = articles[i];
-        let dateArt = article.publishedAt;
-        var d = new Date(dateArt);
-        var date = d.toLocaleDateString();
-        let title = article.title.substring(0,50);
-        let desc = article.description.substring(0,150);
-        
-        $('.news_active').append(`
-          <div class="single__blog d-flex align-items-center">
-              <div class="thum" style="background-image: url(${article.urlToImage})">
-                  
-              </div>
-              <div class="newsinfo">
-                  <span>${date}</span>
-                  <a href="${article.url}">
-                      <h3>${title}...</h3>
-                  </a>
-                  <p>${desc}...</p>
-                  <a class="read_more" target="_blank" href="${article.url}">Read More</a>
-              </div>
-          </div>
-       `);
-  
-       if (i < 3){
-        $('.news_links').append(`
-        <li>
-          <div class="thumb" style="background-image: url(${article.urlToImage})"></div>
-          <div class="info">
-              <a href="${article.url}" target="_blank">
-                  <h4>${title}...</h4>
-              </a>
-              <span>${date}</span>
-          </div>
-        </li>
-       `);
-       }    
-    }
-    
-    }
+  });
+  */
 
-    // render 
+  //console.log(myJson);
+  let articles = [
+    {
+      urlToImage: 'https://scontent-mxp1-1.cdninstagram.com/v/t51.2885-15/e35/s1080x1080/87580043_220298099014554_8902820231302611993_n.jpg?_nc_ht=scontent-mxp1-1.cdninstagram.com&_nc_cat=106&_nc_ohc=OXdO_Awn3W8AX-800KP&oh=f22b898aeefc590c7aff19872219da06&oe=5E892DC5',
+      publishedAt: new Date(),
+      title: '¿Como pueder ayudar?',
+      description: '¿Quieres colaborar? ¡Aquí está toda la info! ♥️✨🇩🇴',
+      url: 'https://www.instagram.com/p/B9AcIs1Dyig/'
+    },
+    {
+      urlToImage: 'https://scontent-mxp1-1.cdninstagram.com/v/t51.2885-15/e35/87305586_856785751413675_8011283164092618706_n.jpg?_nc_ht=scontent-mxp1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=Gj0KVSLeNfAAX_scHpN&oh=a93683a7e65a8118dbee80e5049e278f&oe=5E8503E4',
+      publishedAt: new Date(),
+      title: 'Trabucazo 2020',
+      description: 'Vamos a darle un susto! Hoy la historia se reescribirá 💪🏼🇩🇴🤜🏻🗳',
+      url: 'https://www.instagram.com/p/B9EVmglnC3V/'
+    }
+  ]
+  
+  if (articles){
+    var i;
+    for (i = 0; i < articles.length; i++) {
+      let article = articles[i];
+      let dateArt = article.publishedAt;
+      var d = new Date(dateArt);
+      var date = d.toLocaleDateString();
+      let title = article.title.substring(0,50);
+      let desc = article.description.substring(0,150);
+      
+      $('.news_active').append(`
+        <div class="single__blog d-flex align-items-center">
+            <div class="thum" style="background-image: url(${article.urlToImage})">
+                
+            </div>
+            <div class="newsinfo">
+                <span>${date}</span>
+                <a href="${article.url}">
+                    <h3>${title}...</h3>
+                </a>
+                <p>${desc}...</p>
+                <a class="read_more" target="_blank" href="${article.url}">Read More</a>
+            </div>
+        </div>
+     `);
+
+     if (i < 3){
+      $('.news_links').append(`
+      <li>
+        <div class="thumb" style="background-image: url(${article.urlToImage})"></div>
+        <div class="info">
+            <a href="${article.url}" target="_blank">
+                <h4>${title}...</h4>
+            </a>
+            <span>${date}</span>
+        </div>
+      </li>
+     `);
+     }    
+  }
+  
+  }
+
+  // render 
 
 $('#find-location').on('click', ()=>{
-  /*
-  // Try HTML5 geolocation.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+/*
+// Try HTML5 geolocation.
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var pos = {
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    };
 
-      console.log(position);
-      
-    }, function(e) {
-      console.log(e);
-      
-    });
-  } else {
+    console.log(position);
     
-  }
-  */
+  }, function(e) {
+    console.log(e);
+    
+  });
+} else {
+  
+}
+*/
 })
-    
-  //about-pro-active
+  
+//about-pro-active
 $('.news_active').owlCarousel({
-  loop:true,
-  margin:30,
+loop:true,
+margin:30,
 // autoplay:true,
-  navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
-  nav:false,
-  dots:false,
+navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
+nav:false,
+dots:false,
 // autoplayHoverPause: true,
 // autoplaySpeed: 800,
-  responsive:{
-      0:{
-          items:1,
-          nav:false
+responsive:{
+    0:{
+        items:1,
+        nav:false
 
-      },
-      767:{
-          items:1,
-          nav:false
-      },
-      992:{
-          items:2,
-          nav:false
-      },
-      1200:{
-          items:2,
-      }
-  }
+    },
+    767:{
+        items:1,
+        nav:false
+    },
+    992:{
+        items:2,
+        nav:false
+    },
+    1200:{
+        items:2,
+    }
+}
 });
 
-  });
 
 let searchCandidates = function(municipio){
   console.log(window.location.hostname);
@@ -456,14 +473,14 @@ let googleAutocomplete = {
                         candidate_cargo = candidate.cargo;
                         var candidate_cargo_id = `candidate_${o}`;
                         
-                        $('#candidates_results').append(`<div class="row justify-content-center">
+                        $('#candidates_results').append(`<div class="row justify-content-left cargo-container">
                             <div class="col-lg-6">
                                 <div class="section_title text-center mb-55">
                                     <h3><span>${candidate_cargo}</span></h3>
                                 </div>
                             </div>
                         </div>`);
-                        $('#candidates_results').append(`<div class="row" id="res_${candidate_cargo_id}"></div>`);
+                        $('#candidates_results').append(`<div class="row cand-result-container" id="res_${candidate_cargo_id}"></div>`);
                       }
                       let image = 'img/profile.png';
                       if (candidate.profile_img){

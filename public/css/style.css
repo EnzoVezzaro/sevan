@@ -584,6 +584,10 @@ h3 {
   cursor: pointer;
 }
 
+.cargo-container, .cand-result-container{
+  width: 100%;
+}
+
 /* line 95, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
 .boxed-btn5:hover {
   background: #fff;
