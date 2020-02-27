@@ -6752,6 +6752,8 @@ h6 {
 }
 
 
+
+
 #candidates_results{
   display: flex;
   justify-content: space-between;
@@ -6855,13 +6857,21 @@ h6 {
     margin-bottom: 5px;
     margin-top: 5px;
   }
+
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
   /* line 97, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_blog_part.scss */
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
     margin-top: 5px;
+  }
+  .party_img {
+    float: left;
+    left: 7%;
+    margin: 6px;
+    position: absolute;
+    top: 5px;
   }
 }
 
@@ -6878,6 +6888,13 @@ h6 {
   .blog_part .single-home-blog .card span {
     margin-bottom: 5px;
     margin-top: 5px;
+  }
+  .party_img {
+    float: left;
+    left: 20%;
+    margin: 6px;
+    position: absolute;
+    top: 5px;
   }
 }
 
@@ -6980,13 +6997,6 @@ h6 {
     width: 50%;
     margin-bottom: 40px;
   }
-  .party_img {
-    float: left;
-    left: 45px;
-    margin: 6px;
-    position: absolute;
-    top: 0px;
-  }
 }
 
 @media (max-width: 425px) {
@@ -6996,9 +7006,14 @@ h6 {
   }
   .party_img {
     float: left;
-    left: 125px;
+    left: 95px;
     margin: 6px;
     position: absolute;
     top: 0px;
+  }
+}
+@media (max-width: 376px) {
+  .party_img {
+    left: 75px;
   }
 }
