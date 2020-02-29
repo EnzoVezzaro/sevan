@@ -37,8 +37,8 @@ if (
 
 
 $(document).ready(function(){
-/*
-let azua = [{"candidatos_senado_diputado":"Provincia : Azua"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000219350 LUIS EMILIO SISA CABRERA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000185577 CESAR AUGUSTO ARIAS GONZALEZ"},{"candidatos_senado_diputado":"02.-01000105237 MILVA JOSELIN MELO CIPRIAN"},{"candidatos_senado_diputado":"03.-01000882793 JULIAN PAULA"},{"candidatos_senado_diputado":"04.-10600049604 FRANCISCO ALBERTO SANCHEZ ROSO"},{"candidatos_senado_diputado":"APD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01700028846 CONRADO ARISTIDES SANTANA REYES"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000766830 NICIDIN MENDEZ MONTILLA"},{"candidatos_senado_diputado":"02.-01000880326 EDGAR ENRIQUE MATOS MELO"},{"candidatos_senado_diputado":"03.-40226627699 JHOVANNY ALEXANDER RAMIREZ CALDERON"},{"candidatos_senado_diputado":"04.-01000157352 MANUEL ANTONIO MATOS ANDUJAR"},{"candidatos_senado_diputado":"FNP"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01700024019 EUGENIO DEL JESUS VICENTE SANCHEZ"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00101725539 RAFAEL PORFIRIO CALDERON MARTINEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000402030 RUDDY GONZALEZ"},{"candidatos_senado_diputado":"02.-00104385299 JULIO ALBERTO BRITO PEÑA"},{"candidatos_senado_diputado":"03.-01000102861 LUIS ANTONIO VARGAS RAMIREZ"},{"candidatos_senado_diputado":"04.-01000521763 NURCA NIEVES LUCIANO JIMENEZ DE GALVAN"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000445757 HERNAN ROMERO ABREU"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000184703 FRANCIS RAFAELA SENCION BELTRE"},{"candidatos_senado_diputado":"02.-01000489334 CESARIO DE LA CRUZ MORALES"},{"candidatos_senado_diputado":"03.-01000648210 WILLIAN RAFAEL ANDUJAR DE LA CRUZ"},{"candidatos_senado_diputado":"04.-01000224541 SONIA MERCEDES MONTERO PEREZ"},{"candidatos_senado_diputado":"PRM Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00105027601 VICTOR HIPOLITO SANCHEZ FELIZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01700003849 RAMON ARCANGEL SANTANA RAMIREZ"},{"candidatos_senado_diputado":"02.-00108443987 JESUS MARIA MATOS MATOS"},{"candidatos_senado_diputado":"03.-01000550762 ANGEL OVELIO OGANDO DIAZ"},{"candidatos_senado_diputado":"04.-00111847141 EDISON ALBERTO DIAZ CUSTODIO"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000070423 ANGEL GABRIEL NAVARRO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000467942 JULIO CESAR BATISTA"},{"candidatos_senado_diputado":"02.-01000901981 DARVIN ANTONIO LARA MONTE DE OCA"},{"candidatos_senado_diputado":"03.-01000046019 RAFAEL DIAZ"},{"candidatos_senado_diputado":"04.-01000637601 MARIA ALTAGRACIA DE LEON DE GOMEZ"}];
+
+  let azua = [{"candidatos_senado_diputado":"Provincia : Azua"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000219350 LUIS EMILIO SISA CABRERA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000185577 CESAR AUGUSTO ARIAS GONZALEZ"},{"candidatos_senado_diputado":"02.-01000105237 MILVA JOSELIN MELO CIPRIAN"},{"candidatos_senado_diputado":"03.-01000882793 JULIAN PAULA"},{"candidatos_senado_diputado":"04.-10600049604 FRANCISCO ALBERTO SANCHEZ ROSO"},{"candidatos_senado_diputado":"APD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01700028846 CONRADO ARISTIDES SANTANA REYES"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000766830 NICIDIN MENDEZ MONTILLA"},{"candidatos_senado_diputado":"02.-01000880326 EDGAR ENRIQUE MATOS MELO"},{"candidatos_senado_diputado":"03.-40226627699 JHOVANNY ALEXANDER RAMIREZ CALDERON"},{"candidatos_senado_diputado":"04.-01000157352 MANUEL ANTONIO MATOS ANDUJAR"},{"candidatos_senado_diputado":"FNP"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01700024019 EUGENIO DEL JESUS VICENTE SANCHEZ"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00101725539 RAFAEL PORFIRIO CALDERON MARTINEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000402030 RUDDY GONZALEZ"},{"candidatos_senado_diputado":"02.-00104385299 JULIO ALBERTO BRITO PEÑA"},{"candidatos_senado_diputado":"03.-01000102861 LUIS ANTONIO VARGAS RAMIREZ"},{"candidatos_senado_diputado":"04.-01000521763 NURCA NIEVES LUCIANO JIMENEZ DE GALVAN"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000445757 HERNAN ROMERO ABREU"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000184703 FRANCIS RAFAELA SENCION BELTRE"},{"candidatos_senado_diputado":"02.-01000489334 CESARIO DE LA CRUZ MORALES"},{"candidatos_senado_diputado":"03.-01000648210 WILLIAN RAFAEL ANDUJAR DE LA CRUZ"},{"candidatos_senado_diputado":"04.-01000224541 SONIA MERCEDES MONTERO PEREZ"},{"candidatos_senado_diputado":"PRM Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00105027601 VICTOR HIPOLITO SANCHEZ FELIZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01700003849 RAMON ARCANGEL SANTANA RAMIREZ"},{"candidatos_senado_diputado":"02.-00108443987 JESUS MARIA MATOS MATOS"},{"candidatos_senado_diputado":"03.-01000550762 ANGEL OVELIO OGANDO DIAZ"},{"candidatos_senado_diputado":"04.-00111847141 EDISON ALBERTO DIAZ CUSTODIO"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01000070423 ANGEL GABRIEL NAVARRO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01000467942 JULIO CESAR BATISTA"},{"candidatos_senado_diputado":"02.-01000901981 DARVIN ANTONIO LARA MONTE DE OCA"},{"candidatos_senado_diputado":"03.-01000046019 RAFAEL DIAZ"},{"candidatos_senado_diputado":"04.-01000637601 MARIA ALTAGRACIA DE LEON DE GOMEZ"}];
 let Bahoruco = [{"candidatos_senado_diputado":"Provincia : Bahoruco"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-02200046197 ORLANDO EDUARDO MEDINA NOVAS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-07800005329 ROSALIA MEDINA FERRERAS"},{"candidatos_senado_diputado":"02.-02200005847 AGUSTIN ENCARNACION CUEVAS"},{"candidatos_senado_diputado":"APD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00108471707 ALEJANDRO DOTEL SENA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"02.-07600080746 ARACELIS MEDINA GONZALEZ"},{"candidatos_senado_diputado":"FNP"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-02200279194 LUIS ROSANNGEL CUEVAS MONTERO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-07600216308 VICTOR ALFONSO PAULA REYES"},{"candidatos_senado_diputado":"02.-11200003892 JAFET MAIKAROLIS PEREZ MENDEZ"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-02200037824 MANUEL ANTONIO PAULA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-02200128706 MELANIA SALVADOR JIMENEZ"},{"candidatos_senado_diputado":"02.-07800068848 RAFAEL MENDEZ"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-07800074481 RIGOBERTO PEREZ DIAZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-02200259105 YENNY MARGARITA REYES MENDEZ"},{"candidatos_senado_diputado":"02.-09200145267 RAMON MARIA CRESPO CAMPOS"},{"candidatos_senado_diputado":"PRSC Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-02200194385 MARIO ANDRES LAMA OLIVERO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-07600036169 MENNI LOLIN CUEVAS GONZALEZ"},{"candidatos_senado_diputado":"02.-07600175090 EDUARD JORGE GOMEZ"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-02200022362 IRENE FERRERAS SANCHEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-02200352306 XIOMARA ENCARNACION SANCHEZ"},{"candidatos_senado_diputado":"02.-02200248827 ANNELIS JULISSA ACOSTA MEDINA"}];
 let Barahona = [{"candidatos_senado_diputado":"Provincia : Barahona"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01800221135 JUAN EMILIO LOPEZ FELIZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01800098095 RAFAEL MATOS FELIZ"},{"candidatos_senado_diputado":"02.-01800301879 CARMEN REYES MARIANO"},{"candidatos_senado_diputado":"03.-07900081857 BENJAMIN BATISTA MATOS"},{"candidatos_senado_diputado":"04.-01800134726 DANIA ARGENTINA MONTES DE OCA MATEO"},{"candidatos_senado_diputado":"APD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00112662853 VILO FERRERAS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"02.-00100369784 KEREN MILEDYS FELIZ CORPORAN"},{"candidatos_senado_diputado":"03.-01800456020 MIGUEL ANGEL DE LA CRUZ MEDINA"},{"candidatos_senado_diputado":"04.-01800153239 TILSON MEDINA MONTERO"},{"candidatos_senado_diputado":"FNP"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00107457194 EDDY FRANCISCO GONZALEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-00112693197 ANTONIO RAMIREZ CASTILLO"},{"candidatos_senado_diputado":"02.-01800532168 LUCIANO HOMERO VASQUEZ RIVEROS"},{"candidatos_senado_diputado":"03.-01800585588 YISMEL ALTAGRACIA CASTILLO FELIZ"},{"candidatos_senado_diputado":"04.-01800640755 DIONICIO DIAZ TERRERO"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01800360859 EDIS FERNANDO MATEO VASQUEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-00110150059 FABIO ERNESTO VARGAS MATOS"},{"candidatos_senado_diputado":"02.-00101655868 NORIS ELIZABETH MEDINA MEDINA"},{"candidatos_senado_diputado":"03.-07900086641 RUDY MARIA MENDEZ"},{"candidatos_senado_diputado":"04.-01800324467 MARIANO MONTERO VALLEJO"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01800448910 JULIO CESAR RAMIREZ PEREZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01800445098 NOE PEREZ RAMIREZ"},{"candidatos_senado_diputado":"02.-01800390559 ADA YRIS FELIZ ARIAS"},{"candidatos_senado_diputado":"03.-01800547133 JOSE NATANAEL GOMEZ RUIZ"},{"candidatos_senado_diputado":"04.-01800582080 MIGUEL ANGEL ANGLERO MATOS"},{"candidatos_senado_diputado":"PRSC Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01800056614 NOE STERLING VASQUEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01800172940 MIGUEL ANGEL FELIZ"},{"candidatos_senado_diputado":"02.-01800341941 EDGAR AUGUSTO FELIZ MENDEZ"},{"candidatos_senado_diputado":"03.-01800439877 MANUEL MIGUEL FLORIAN TERRERO"},{"candidatos_senado_diputado":"04.-00114103484 BELGIA SOLER"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-01800024844 DANIEL CARBONEL TERRERO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-01800672428 CREYSI ESTHER MATEO LOPEZ"},{"candidatos_senado_diputado":"02.-01800022723 LENNIN ALFREDO MENDEZ LOPEZ"},{"candidatos_senado_diputado":"03.-01900004191 LIDIA JOSELINA FELIZ ALCANTARA"},{"candidatos_senado_diputado":"04.-01800321695 MIGUEL SAMBOY MENDEZ"}]
 let Dajabon = [{"candidatos_senado_diputado":"Provincia : Dajabon"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00111766994 DIORIS ANDRIXON CONTRERAS BAUTISTA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-04400137263 BENITO ALFREDO TORIBIO DIAZ"},{"candidatos_senado_diputado":"02.-07300157760 ELISABETH CABA CABRERA"},{"candidatos_senado_diputado":"APD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-07300136020 ARCADIO MODESTO SOSA ARIAS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-11600010604 JAIRO NATANAEL RIVAS CRUZ"},{"candidatos_senado_diputado":"02.-00102248259 JUAN BAUTISTA UREÑA RECIO"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-04400007557 ROSA SONIA MATEO ESPINOSA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-04400041366 RAFAEL DE JESUS JIMENEZ CASTRO"},{"candidatos_senado_diputado":"02.-07300082307 GREGORIO REYES CASTILLO"},{"candidatos_senado_diputado":"PLR Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-04400038933 MARIO ANTONIO TORRES ULLOA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-07300011207 RICARDO LESPIN DE LA CRUZ"},{"candidatos_senado_diputado":"02.-04400101228 NORMA JOSEFA BUENO BUENO"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-04400047389 EDITA TEJADA"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-04300038611 MARIBEL MINAYA DE LOS SANTOS"},{"candidatos_senado_diputado":"02.-04400251775 SONIA ELIZABETH PICHARDO"},{"candidatos_senado_diputado":"PRM Y ALIADOS"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-00100564061 JESUS MARIA FELIZ JIMENEZ"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-04400083897 DARIO DE JESUS ZAPATA ESTEVEZ"},{"candidatos_senado_diputado":"02.-07300016545 ROLANDO DE JESUS PERALTA TEJADA"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"SENADOR"},{"candidatos_senado_diputado":"01.-04300009075 LINARES CUEVAS BERIHUETE"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-04400208775 GERARDO NOEL MEJIA ALVAREZ"},{"candidatos_senado_diputado":"02.-04400236958 JENNIFER ALEXANDRA GIL RODRIGUEZ"}]
@@ -98,8 +98,9 @@ let SANTO_DOMINGO = [{"candidatos_senado_diputado":"Provincia : SANTO DOMINGO"},
 
 let VALVERDE = [{"candidatos_senado_diputado":"Provincia : VALVERDE"},{"candidatos_senado_diputado":"ALPAIS"},{"candidatos_senado_diputado":"_SENADOR"},{"candidatos_senado_diputado":"01.-03400090860 MIDALMA ALTAGRACIA UREÑA REYES"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-03400040071 FAUSTO FELISE PEÑA RODRIGUEZ"},{"candidatos_senado_diputado":"02.-03400529677 GENY NAFTALI LOZADA NUÑEZ"},{"candidatos_senado_diputado":"03.-07300003873 HECTOR ABRAHAN REYNOSO CRUCETA"},{"candidatos_senado_diputado":"PLD Y ALIADOS"},{"candidatos_senado_diputado":"_SENADOR"},{"candidatos_senado_diputado":"01.-03400131417 MANUEL DE JESUS GUICHARDO VARGAS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-03400291914 CESAR AUGUSTO OCTAVIO MATIAS PEREZ"},{"candidatos_senado_diputado":"02.-03400169169 JOHANNY MERCEDES GUZMAN RODRIGUEZ DE BATISTA"},{"candidatos_senado_diputado":"03.-06800044668 ANGELA POZO"},{"candidatos_senado_diputado":"PQDC"},{"candidatos_senado_diputado":"_SENADOR"},{"candidatos_senado_diputado":"01.-03300189135 PANTALEON ENCARNACION MONTERO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-03400350405 ROXANNA ALTAGRACIA RODRIGUEZ ALMONTE"},{"candidatos_senado_diputado":"02.-03300041013 LENIN ANTONIO ALMONTE TAVAREZ"},{"candidatos_senado_diputado":"03.-00113105100 RAMONA ALTAGRACIA VENTURA FOTINE"},{"candidatos_senado_diputado":"PRSC Y ALIADOS"},{"candidatos_senado_diputado":"_SENADOR"},{"candidatos_senado_diputado":"01.-09200022474 MARTIN EDILBERTO NOLASCO VARGAS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-03400040246 JOSE MIGUEL PERALTA CASTELLANOS"},{"candidatos_senado_diputado":"02.-03400106757 JOSE FRANCISCO LOPEZ CHAVEZ"},{"candidatos_senado_diputado":"03.-03400129320 MANUEL ANDRES BERNARD"},{"candidatos_senado_diputado":"PRSD Y ALIADOS"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-09200150531 MAIRA TINEO MOREL"},{"candidatos_senado_diputado":"02.-03400569806 MARIA FERNANDA FRIAS RODRIGUEZ"},{"candidatos_senado_diputado":"UDC"},{"candidatos_senado_diputado":"_SENADOR"},{"candidatos_senado_diputado":"01.-03400536839 MANUEL ADOLFO CEPEDA COLLADO"},{"candidatos_senado_diputado":"DIPUTADO"},{"candidatos_senado_diputado":"01.-03400387506 ROBINSON RAFAEL DURAN TEJADA"},{"candidatos_senado_diputado":"02.-03400459602 CINTHYA MARIA ALVAREZ TEJADA"},{"candidatos_senado_diputado":"03.-03400466391 REISON RADHAMES DURAN TEJADA"}]
 
+/*, 
 let all = [
-azua, 
+azua,
 Bahoruco, 
 Barahona, 
 Dajabon, 
@@ -133,12 +134,105 @@ SANTO_DOMINGO,
 VALVERDE
 ];
 
+var result = [];
 all.map(provs => {
   console.log(provs);
+  var current_cargo = '';
+  var last_cargo = '';
+  var last_provincia = '';
+  var current_cadidatos = [];
+  var provice_set = false;
+  var cargo_set = false;
+  var candidates_set = false;
+  var last_partido = ''
+  var current_partido = '';
+  var set_partido = false;
   provs.map((prov, index) => {
-    console.log(prov);
-    console.log(index);
+    
+    for (let [key, value] of Object.entries(prov)) {
+      if (
+        cargo_set
+      ){
+        //console.log('value: ', value);
+        candidates_set = true;
+        if (!value.match(/^\d/)) {
+          current_partido = value;
+          console.log(last_provincia);  
+          console.log(current_partido);  
+          console.log(current_cargo);  
+          console.log(result[last_provincia][current_partido]);  
+          //result[last_provincia][current_partido][current_cargo].push(value);
+        } 
+        
+      }
+      //console.log('value: ', value);
+      if (
+        provice_set
+      ){
+        //console.log('value: ', value);
+        // exclude candidates
+        if (!value.match(/^\d/)) {
+          if (
+            set_partido
+          ) {
+            //console.log('value: ', value);
+            current_cargo = value;
+            cargo_set = true;
+            //console.log('result: ', last_provincia);
+            //console.log('result: ', result[last_provincia]);
+            //console.log(last_cargo);
+            console.log(result);
+            if (last_cargo !== current_cargo){
+              result[last_provincia][current_partido][current_cargo] = [];
+              last_cargo = current_cargo;
+            }
+            //console.log('result: ', result);
+          }  else {
+
+            if (
+              value != "SENADOR" ||
+              value != "DIPUTADO"
+            ){
+              // SET PARTY
+              console.log('value: ', value);
+              current_partido = value;
+              set_partido = true;
+              //console.log('result: ', last_provincia);
+              //console.log('result: ', result[last_provincia]);
+              //console.log(last_cargo);
+              //console.log(current_cargo);
+              if (last_partido !== current_partido){
+                result[last_provincia][current_partido] = [];
+                last_partido = current_partido;
+              }
+            }
+          }
+        } 
+      }
+
+      //console.log(value);
+      var isProvince = value.search("Provincia");
+      if (
+        isProvince === 0
+      ){
+        result[value] = [];
+        last_provincia = value;
+        provice_set = true;
+        current_cargo = '';
+        last_cargo = '';
+        current_cadidatos = [];
+        cargo_set = false;
+        candidates_set = false;
+        last_partido = '';
+        current_partido = '';
+        set_partido = false;
+      }
+      
+    }
+
   })
+
+  console.log('result: ', result);
   
 })
 */
@@ -538,7 +632,7 @@ let googleAutocomplete = {
                             party_img = '';
                             break;
                         case 'PARTIDO FUERZA DEL PUEBLO':
-                            party_img = '';
+                            party_img = 'https://pbs.twimg.com/profile_images/1219762210429440001/AZ0X4aIC_400x400.jpg';
                             break;
                         case 'PARTIDO HUMANISTA DOMINICANO':
                             party_img = '';
