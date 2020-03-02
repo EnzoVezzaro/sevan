@@ -2323,6 +2323,8 @@ h3 {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer .footer_top .footer_widget .news_links li .info{
